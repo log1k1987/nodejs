@@ -1,0 +1,19 @@
+{
+    "name": "DZ2",
+    "version": "1.0.0",
+    "description": "Параметры командной строки:",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "privet": "nodemon server.js",
+        "start": "cross-env INTERVAL_SHOW_DATA=1000 STOP_SHOW_DATA=5000 nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cross-env": "^5.2.0",
+        "dotenv": "^6.1.0",
+        "pug": "^2.0.3"
+    }
+}
