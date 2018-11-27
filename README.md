@@ -1,5 +1,7 @@
 ﻿http://127.0.0.1:3000/
 
-Запуск:
+DZ2a запуск:
 
-node server.js
+npm run start
+
+DZ2b запуск:

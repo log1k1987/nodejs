@@ -5,8 +5,8 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "privet": "nodemon server.js",
-        "start": "cross-env INTERVAL_SHOW_DATA=1000 STOP_SHOW_DATA=5000 nodemon server.js"
+        "privet": "cross-env INTERVAL_SHOW_DATA=1000 STOP_SHOW_DATA=5000 nodemon server.js",
+        "start": "cross-env INTERVAL_SHOW_DATA=1000 STOP_SHOW_DATA=5000 node server.js"
     },
     "keywords": [],
     "author": "",
