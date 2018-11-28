@@ -3,5 +3,3 @@
 DZ2a запуск:
 
 npm run start
-
-DZ2b запуск:
