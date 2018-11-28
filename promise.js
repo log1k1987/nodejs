@@ -63,6 +63,7 @@ readDir(startP, finishP, 0)
     });
 
 process.on('unhandledRejection', (reason, p) => {
+    // ловит необработаннные ошибки в промисах
     console.log('Unhandled Rejection at:', p, 'reason:', reason);
     process.exit(1);
 });
