@@ -1,11 +1,11 @@
 const http = require('http');
 
-const { INTERVAL_SHOW_DATA, STOP_SHOW_DATA } = process.env;
+const { INTERVAL_SHOW_DATA = 2000, STOP_SHOW_DATA = 10000 } = process.env;
 //Переменные окружения
 //require('dotenv').config(); npm i dotenv и создать файл .env с переменными или через scripts в package.json, предварительно установив кроссплатформенный пакет env с Npm(cross-env)
 
 http.createServer((req, res) => {
-    if (req.url === '/favicon.ico') {  
+    if (req.url === '/favicon.ico') {
         //res.writeHead(200, { 'Content-Type': 'image/x-icon' });
         res.end();
         console.log('favicon bb');
