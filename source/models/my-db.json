@@ -1,9 +1,34 @@
 {
-  "log1k": {
-    "path": "\\public\\upload\\7.jpg"
+  "Product": {
+    "log1k": {
+      "path": "\\public\\upload\\ddddddddddddddddddddddd.jpg",
+      "price": "999"
+    },
+    "Николай": {
+      "path": "\\public\\upload\\as.jpg",
+      "price": "333"
+    },
+    "log1k@mail.ru": {
+      "path": "\\public\\upload\\test1.jpg",
+      "price": "4"
+    },
+    "hramoy": {
+      "path": "\\public\\upload\\ffffffffffff.jpg",
+      "price": "90"
+    }
   },
-  "Конь": {
-    "path": "\\public\\upload\\as.jpg",
-    "price": "999"
+  "Skills": {
+    "76f1f0e7-b9a1-4b1a-bad6-dc48ae819bfe": {
+      "age": "7",
+      "concerts": "7",
+      "cities": "7",
+      "years": "7"
+    },
+    "77d60aaf-8c26-4cce-99be-8880f1c73dcc": {
+      "age": "99",
+      "concerts": "99",
+      "cities": "99",
+      "years": "99"
+    }
   }
 }

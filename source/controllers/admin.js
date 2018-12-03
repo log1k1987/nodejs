@@ -2,16 +2,28 @@ const formidable = require('formidable');
 const fs = require('fs');
 const path = require('path');
 const db = require('../models/db')();
+//import uuidv4 from 'uuid/v4';
+const uuidv4 = require('uuid/v4');
 
 module.exports.getAdmin = function(req, res) {
   res.render('pages/admin', {
     msgfile: req.query.msgfile,
+    msgskill: req.query.msgskill,
   });
 };
 
 module.exports.sendSkills = function(req, res) {
   console.log('SKILLS');
-  res.render('pages/admin', { title: 'Admin' });
+  console.log(req.body);
+
+  db.set(`Skills:${uuidv4()}`, {
+    age: req.body.age,
+    concerts: req.body.concerts,
+    cities: req.body.cities,
+    years: req.body.years,
+  });
+  db.save();
+  res.redirect('/admin/?msgskill=Данные успешно добавлены в базу');
 };
 
 module.exports.sendUpload = function(req, res, next) {
@@ -46,7 +58,7 @@ module.exports.sendUpload = function(req, res, next) {
 
       let dir = fileName.substr(fileName.indexOf('\\'));
 
-      db.set(fields.name, { path: dir, price: fields.price });
+      db.set(`Product:${fields.name}`, { path: dir, price: fields.price });
       db.save();
       res.redirect('/admin/?msgfile=Картинка успешно загружена');
     });
