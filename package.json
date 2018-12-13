@@ -46,6 +46,7 @@
     "express-session": "^1.15.6",
     "formidable": "^1.1.1",
     "jquery": "^3.3.1",
+    "lowdb": "^1.0.0",
     "morgan": "^1.9.0",
     "nconf": "^0.10.0",
     "nodemailer": "^4.4.1",
