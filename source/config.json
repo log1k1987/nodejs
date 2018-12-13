@@ -6,8 +6,8 @@
             "port": 465,
             "secure": true,
             "auth": {
-                "user": "babaika7891@gmail.com",
-                "pass": "log1ka1987"
+                "user": "почта@gmail.com",
+                "pass": "пароль"
             }
         }
     }

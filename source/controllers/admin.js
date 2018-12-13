@@ -1,7 +1,7 @@
 const formidable = require('formidable');
 const fs = require('fs');
 const path = require('path');
-const db = require('../models/db')();
+const db = require('../models/1db')();
 //import uuidv4 from 'uuid/v4';
 const uuidv4 = require('uuid/v4');
 

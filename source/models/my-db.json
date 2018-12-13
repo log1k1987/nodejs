@@ -1,34 +1,22 @@
 {
   "Product": {
-    "log1k": {
+    "Николай": {
       "path": "\\public\\upload\\ddddddddddddddddddddddd.jpg",
       "price": "999"
-    },
-    "Николай": {
-      "path": "\\public\\upload\\as.jpg",
-      "price": "333"
-    },
-    "log1k@mail.ru": {
-      "path": "\\public\\upload\\test1.jpg",
-      "price": "4"
-    },
-    "hramoy": {
-      "path": "\\public\\upload\\ffffffffffff.jpg",
-      "price": "90"
     }
   },
   "Skills": {
-    "76f1f0e7-b9a1-4b1a-bad6-dc48ae819bfe": {
-      "age": "7",
-      "concerts": "7",
-      "cities": "7",
-      "years": "7"
+    "66965481-a0a9-4cf7-aad2-4180463aeb35": {
+      "age": "44",
+      "concerts": "44",
+      "cities": "44",
+      "years": "44"
     },
-    "77d60aaf-8c26-4cce-99be-8880f1c73dcc": {
-      "age": "99",
-      "concerts": "99",
-      "cities": "99",
-      "years": "99"
+    "dbec0ac5-9e49-4799-9edf-b74ab903196b": {
+      "age": "55",
+      "concerts": "55",
+      "cities": "55",
+      "years": "55"
     }
   }
 }

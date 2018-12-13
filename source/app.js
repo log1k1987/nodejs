@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const session = require('express-session');
 // const bodyParser = require('body-parser');
 
 // view engine setup
@@ -13,13 +14,27 @@ app.set('view engine', 'pug');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(
+  session({
+    secret: 'loftschool',
+    key: 'sessionkey',
+    cookie: {
+      path: '/',
+      httpOnly: true,
+      maxAge: null,
+    },
+    saveUninitialized: false,
+    resave: false,
+  })
+);
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', require('./routes/index'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found Piska');
+  var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

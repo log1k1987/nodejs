@@ -2,9 +2,8 @@ const nodemailer = require('nodemailer');
 const config = require('../config.json');
 
 module.exports.getIndex = function(req, res) {
-  res.render('pages/index', { title: 'Sosamber' });
+  res.render('pages/index', { title: 'Opanki' });
   // eslint-disable-next-line no-console
-  console.log('get s0s0');
   //res.end;
 };
 
