@@ -1,8 +1,16 @@
 const nodemailer = require('nodemailer');
 const config = require('../config.json');
+const db = require('../models/1db')();
 
 module.exports.getIndex = function(req, res) {
-  res.render('pages/index', { title: 'Opanki' });
+  //console.log(db.get('Product'));
+  const product = db.get('Product');
+  const skill = db.get('Skills');
+  //console.log(skill);
+  res.render('pages/index', {
+    products: product,
+    skills: skill,
+  });
   // eslint-disable-next-line no-console
   //res.end;
 };

@@ -1,22 +1,62 @@
 {
   "Product": {
-    "Николай": {
-      "path": "\\public\\upload\\ddddddddddddddddddddddd.jpg",
-      "price": "999"
+    "14afe529-df9e-4dd8-9dc9-55c38c251a72": {
+      "name": "Капуста",
+      "path": "\\upload\\as.jpg",
+      "price": "333"
+    },
+    "0e0f74bd-dec2-4513-b6d7-6f172531883f": {
+      "name": "marta",
+      "path": "\\upload\\ddddddddddddddddddddddd.jpg",
+      "price": "555"
+    },
+    "b709d210-d13d-4c0d-b8ff-e9591d602668": {
+      "name": "Николина",
+      "path": "\\upload\\3.jpg",
+      "price": "555"
+    },
+    "967bf16b-3081-4700-9f0a-b924eb17d707": {
+      "name": "sssssssssssssssss",
+      "path": "\\upload\\test1.jpg",
+      "price": "777777777777"
+    },
+    "e995c5aa-519b-490e-a688-246da3a32514": {
+      "name": "asdasd",
+      "path": "\\upload\\5.jpg",
+      "price": "4"
+    },
+    "f04c0492-6f0a-4d3b-a5cf-93f2b50ac85e": {
+      "name": "weee",
+      "path": "\\upload\\ffffffffffff.jpg",
+      "price": "4"
+    },
+    "4483b07a-a8e4-4148-b8a4-05f3eaacb6a2": {
+      "name": "erer",
+      "path": "\\upload\\as.jpg",
+      "price": "444"
+    },
+    "8fbfa8c8-0eaf-4ddc-b0b2-6f5952ae72c6": {
+      "name": "sdfsdfsdf",
+      "path": "\\upload\\ddddddddddddddddddddddd.jpg",
+      "price": "4"
+    },
+    "cb7e0d23-b252-4975-a4a7-142046ac0f33": {
+      "name": "bdbdbd",
+      "path": "\\upload\\6.jpg",
+      "price": "5555"
     }
   },
-  "Skills": {
-    "66965481-a0a9-4cf7-aad2-4180463aeb35": {
-      "age": "44",
-      "concerts": "44",
-      "cities": "44",
-      "years": "44"
+  "Skills": [{
+      "number": "11"
     },
-    "dbec0ac5-9e49-4799-9edf-b74ab903196b": {
-      "age": "55",
-      "concerts": "55",
-      "cities": "55",
-      "years": "55"
+    {
+      "number": "22"
+    },
+    {
+      "number": "33"
+    },
+    {
+      "number": "44"
     }
-  }
+  ]
 }

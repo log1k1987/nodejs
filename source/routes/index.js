@@ -23,7 +23,7 @@ router.get('/login', ctrlLogin.getLogin);
 router.post('/login', ctrlLogin.auth);
 
 router.get('/admin', isAdmin, ctrlAdmin.getAdmin);
-router.post('/admin/skills', ctrlAdmin.sendSkills);
-router.post('/admin/upload', ctrlAdmin.sendUpload);
+router.post('/admin/skills', isAdmin, ctrlAdmin.sendSkills);
+router.post('/admin/upload', isAdmin, ctrlAdmin.sendUpload);
 
 module.exports = router;

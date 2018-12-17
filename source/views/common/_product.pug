@@ -3,10 +3,10 @@ section.product
     .product__subtitle.subtitle Товары от студии Архипова
     h2.product__title.title Мой личный бренд
     ul.product__list
-      each item in products
+      each item in products || product
         li.product__item
-          img(src=`${item.src}`).product__img
+          img(src=`${item.path || 1}`).product__img
           .product__hover
             .product__description
               .product__name= item.name
-              .product__price= `$ ${item.price}`
+              .product__price= `$ ${item.price || 2}`
