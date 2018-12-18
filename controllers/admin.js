@@ -1,4 +1,3 @@
-const formidable = require('formidable');
 const fs = require('fs');
 const path = require('path');
 const db = require('../models/1db')();
@@ -21,55 +20,43 @@ module.exports.sendSkills = async ctx => {
 };
 
 module.exports.sendUpload = async ctx => {
-    let form = new formidable.IncomingForm();
-    let upload = path.join('../public', 'upload');
-    if (!fs.existsSync(upload)) {
-        fs.mkdirSync(upload);
+    const { name, price } = ctx.request.body;
+    const { name: fileName, size: fileSize, path: filePath } = ctx.request.files.photo;
+
+    const valid = validation(name, price, fileName, fileSize);
+    if (valid.err) {
+        fs.unlinkSync(filePath);
+        ctx.flash.set({ msgfile: valid.status });
+        ctx.redirect('/admin');
     }
 
-    form.uploadDir = path.join(process.cwd(), upload);
+    let fileFullName = path.join(process.cwd(), 'public', 'upload', fileName);
 
-    form.parse(req, function(err, fields, files) {
+    fs.rename(filePath, fileFullName, err => {
         if (err) {
-            return next(err);
+            console.error(err.message);
+            return;
         }
-
-        const valid = validation(fields, files);
-        if (valid.err) {
-            fs.unlinkSync(files.photo.path);
-            ctx.flash.set({ msgfile: valid.status });
-            return ctx.redirect('/admin');
-        }
-
-        const fileName = path.join(upload, files.photo.name);
-
-        fs.rename(files.photo.path, fileName, function(err) {
-            if (err) {
-                console.error(err.message);
-                return;
-            }
-
-            let dir = fileName.substr(fileName.indexOf('\\upload'));
-
-            db.set(`Product:${uuidv4()}`, {
-                name: fields.name,
-                path: dir,
-                price: fields.price,
-            });
-
-            db.save();
-            ctx.flash.set({ msgfile: 'Данные успешно добавлены в базу' });
-            return ctx.redirect('/admin');
+        db.set(`Product:${uuidv4()}`, {
+            name: name,
+            path: path.join('upload', fileName),
+            price: price,
         });
+        db.save();
     });
+    ctx.flash.set({ msgfile: 'Картинка успешно загружена' });
+    ctx.redirect('/admin');
 };
 
-const validation = (fields, files) => {
-    if (files.photo.name === '' || files.photo.size === 0) {
+const validation = (name, price, fileName, fileSize) => {
+    if (fileName === '' || fileSize === 0) {
         return { status: 'Не загружена картинка!', err: true };
     }
-    if (!fields.name) {
+    if (!name) {
         return { status: 'Не указано описание картинки!', err: true };
+    }
+    if (!price) {
+        return { status: 'Не указано цена!', err: true };
     }
     return { status: 'Ok', err: false };
 };

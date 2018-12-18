@@ -15,7 +15,7 @@ const pug = new Pug({
     pretty: false,
     basedir: './views',
     noCache: true,
-    app: app, // equals to pug.use(app) and app.use(pug.middleware)
+    app: app,
 });
 
 const errorHandler = require('./libs/error');

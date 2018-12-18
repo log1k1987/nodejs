@@ -1,16 +1,33 @@
 {
   "Skills": [
     {
-      "number": "2"
+      "number": "54"
     },
     {
-      "number": "2"
+      "number": "54"
     },
     {
-      "number": "2"
+      "number": "54"
     },
     {
-      "number": "2"
+      "number": "54"
     }
-  ]
+  ],
+  "Product": {
+    "a3f5b8e3-7e73-47ad-8952-782328d98b17": {
+      "name": "ыфвфыв",
+      "path": "upload\\amer afon.jpg",
+      "price": "222"
+    },
+    "3fedb28c-69f5-4c4b-a7f6-992180cc8c59": {
+      "name": "пиплз",
+      "path": "upload\\4.jpg",
+      "price": "3"
+    },
+    "52171df2-a15c-4453-b197-be80ee9dc51b": {
+      "name": "3",
+      "path": "upload\\3.jpg",
+      "price": "3"
+    }
+  }
 }
