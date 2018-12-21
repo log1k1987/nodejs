@@ -1,0 +1,23 @@
+{
+  "name": "DZ5",
+  "version": "1.0.0",
+  "description": "Параметры командной строки:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/log1k1987/nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/log1k1987/nodejs/issues"
+  },
+  "homepage": "https://github.com/log1k1987/nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
