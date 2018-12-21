@@ -1,20 +1,14 @@
 const express = require('express');
 const app = express();
-const { resolve } = require('path');
+const path = require('path');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static(resolve(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', function(req, res) {
-    res.sendFile(resolve(__dirname, 'dist/index.html'));
-});
-
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 // error handler
